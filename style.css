@@ -1,9 +1,14 @@
 *{
+    margin: 0px;
     font-family: Arial, Helvetica, sans-serif
 }
 
+body{
+    width: 1100px;
+}
+
 #profileImage img{
-    max-height: 300px;
+    max-height: 450px;
     width: auto;
 }
 
@@ -30,19 +35,61 @@
 }
 
 #footerImage img{
-    max-width:450px;
+    max-width:500px;
     height: auto;
 }
 
+header{
+    padding:3em;
+    display:flex;
+    background: rgb(33,135,175);
+    background: linear-gradient(145deg, rgba(33,135,175,1) 0%, rgba(255,255,255,1) 50%);
+}
+
+#profileImage{
+    color:white;
+    font-size: 50px;
+    position:relative;
+}
+
+#myName{
+    position:absolute;
+    bottom: 20px;
+    left: 10px;
+}
+
+#aboutSection{
+    border: 1px solid rgb(202, 199, 199);
+    background-color: white;
+    display:flex;
+    flex-direction: column;
+    max-width: 500px;
+    gap: 15px;
+    padding: 20px;
+    margin-top: 50px;
+    margin-bottom: 60px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+#aboutSection .content{
+    line-height: 1.5;
+}
+
+#aboutSection .links{
+    display:flex;
+    justify-content: end;
+    gap: 10px;
+}
 
 #card1, #card2, #card3, #card4, #card5, #card6{
-    border: 1px solid black;
+    border: 1px solid rgb(202, 199, 199);
     max-width: 300px;
     min-width:250px;
     height: 350px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(10, 1fr);
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
 }
 
 #card1 .screenshot{
@@ -96,6 +143,16 @@
     color: rgb(80, 78, 78);
 }
 
+main {
+    padding: 3em;
+}
+
+#cardStack{
+    display:flex;
+    flex-wrap: wrap;
+    gap: 40px 20px;
+}
+
 footer{
     background-color: rgb(33, 135, 175);
     display:flex;
@@ -107,12 +164,14 @@ footer{
     color: white;
 }
 
-
-#contactInformation .title{
-    font-size: 35px;
+#contactInformation{
+    
 }
 
-
+#aboutSection .title, main .title, #contactInformation .title{
+    font-size: 35px;
+    padding-bottom: 10px;
+}
 
 #contactInformation .phoneNumber, #contactInformation .email{
    display:flex;
