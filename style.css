@@ -3,10 +3,6 @@
     font-family: Arial, Helvetica, sans-serif
 }
 
-body{
-    width: 1100px;
-}
-
 #profileImage img{
     max-height: 450px;
     width: auto;
@@ -151,6 +147,8 @@ main {
     display:flex;
     flex-wrap: wrap;
     gap: 40px 20px;
+    justify-content: center;
+    min-width:380px;
 }
 
 footer{
@@ -177,4 +175,66 @@ footer{
    display:flex;
    gap: 10px;
    align-items: center;
+}
+
+@media(max-width:1400px){
+
+}
+
+@media (max-width:1050px){
+    header{
+        padding:1em;
+    }
+    #myName{
+        position:absolute;
+        top:0px;
+        left: 160px;
+    }
+    #profileImage{
+        float:left;
+        position:relative;
+    }
+    #aboutSection{
+        margin-top: 150px;
+        min-height: 500px;
+        min-width: 500px;
+    }
+    #footerImage img{
+        object-fit: cover;
+        height: 334px;
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 600px){
+    header{
+        flex-wrap: wrap;
+        padding: 1em;
+        justify-content: center;
+    }
+    #myName{
+        position:absolute;
+        top: 390px;
+        left: 80px;
+    }
+    #aboutSection{
+        border:none;
+        box-shadow:none;
+        margin-top: 0px;
+        margin-bottom: 10px;
+    }
+    main{
+        padding: 1em;
+    }
+    footer{
+        flex-wrap: wrap;
+        padding: 1em;
+        justify-content: center;
+    }
+    #footerImage img{
+        max-width: 360px;
+        object-fit: cover;
+        height: 334px;
+        width: 100%;
+    }
 }
